@@ -33,7 +33,7 @@ public class SearchController {
 
     @PostMapping(value = "results")
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm){
-        ArrayList<Job> jobs;
+        ArrayList<Job> jobs = new ArrayList<>();;
 
         String sanitizedTerm = searchTerm.trim().toLowerCase();
         if (sanitizedTerm.contains("all")){
